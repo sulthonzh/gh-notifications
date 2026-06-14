@@ -2,7 +2,6 @@
 import { execSync } from "child_process";
 import { stdout, exit } from "process";
 
-// ── helpers ──────────────────────────────────────────────────────────
 function daysSince(dateStr) {
   const then = new Date(dateStr);
   const now = new Date();
@@ -41,7 +40,6 @@ function reasonLabel(r) {
   return map[r] || r;
 }
 
-// ── data ─────────────────────────────────────────────────────────────
 function ghAvailable() {
   try {
     execSync("gh --version", { stdio: "pipe" });
@@ -94,7 +92,6 @@ function fetchNotifications(opts = {}) {
   }));
 }
 
-// ── formatters ───────────────────────────────────────────────────────
 function formatText(items) {
   if (!items.length) return "No notifications.";
   const lines = [];
@@ -145,7 +142,6 @@ function formatMarkdown(items) {
   return lines.join("\n");
 }
 
-// ── CLI ──────────────────────────────────────────────────────────────
 function parseArgs(argv) {
   const args = argv.slice(2);
   const opts = { format: "text" };
@@ -208,7 +204,6 @@ REQUIRES
   gh CLI authenticated (gh auth login)
 `.trim();
 
-// ── main ─────────────────────────────────────────────────────────────
 export {
   daysSince,
   formatDays,
@@ -222,7 +217,6 @@ export {
   HELP,
 };
 
-// run as CLI
 if (process.argv[1] && process.argv[1].endsWith("cli.js")) {
   const opts = parseArgs(process.argv);
   if (opts.help) {
