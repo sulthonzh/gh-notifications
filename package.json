@@ -2,12 +2,31 @@
   "name": "gh-notifications",
   "version": "1.0.0",
   "description": "See your GitHub notifications at a glance — unread issues, PRs, reviews across all your repos",
-  "bin": { "gh-notifications": "./cli.js" },
   "main": "./cli.js",
   "type": "module",
-  "scripts": { "test": "node --test tests/*.test.mjs" },
-  "keywords": ["github", "notifications", "cli", "gh"],
+  "bin": {
+    "gh-notifications": "./cli.js"
+  },
+  "files": [
+    "cli.js",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "github",
+    "notifications",
+    "cli",
+    "gh"
+  ],
+  "author": "Sulthonzh",
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/sulthonzh/gh-notifications" },
-  "engines": { "node": ">=18" }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sulthonzh/gh-notifications"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
