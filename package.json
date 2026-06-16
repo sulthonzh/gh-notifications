@@ -1,5 +1,5 @@
 {
-  "name": "gh-notifications",
+  "name": "@quadbyte/gh-notifications",
   "version": "1.0.0",
   "description": "See your GitHub notifications at a glance — unread issues, PRs, reviews across all your repos",
   "main": "./cli.js",
@@ -28,5 +28,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
