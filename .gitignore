@@ -35,3 +35,5 @@ build/
 __pycache__/
 .venv/
 *.backup
+*.egg-info/
+.mypy_cache/
